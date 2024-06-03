@@ -1,0 +1,190 @@
+---
+import Polka from "@components/base/Polka.astro";
+import Card from "@components/base/Card.astro";
+---
+
+<div x-cloak class="relative overflow-hidden" x-intersect="activeStep = ''">
+  <div x-data="swiper()" class="carousel-container">
+    <div class="carousel-controls flex items-center justify-end mb-4">
+      <button class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300" @click="swiper.slidePrev()">
+        <iconify-icon class="iconify" icon="lucide:arrow-left"></iconify-icon>
+      </button>
+
+      <button class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300" @click="swiper.slideNext()">
+        <iconify-icon class="iconify" icon="lucide:arrow-right"></iconify-icon>
+      </button>
+    </div>
+    <div class="swiper-container" x-ref="container">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <Card class="'p-6'">
+            <div class="w-full flex flex-col gap-8 font-sans">
+              <iconify-icon class="iconify w-8 h-8 flex items-center justify-center text-3xl text-primary-600 dark:text-rose-500" icon="fa6-solid:quote-left"></iconify-icon>
+              <p class="text-muted-500 dark:text-muted-300">
+                "Antes de descubrir esta página web, me sentía perdido y sin dirección en mi vida. 
+                Gracias a los recursos y consejos que encontré aquí, he podido superar mis miedos y 
+                tomar el control de mis emociones. ¡Ahora me siento más seguro y en paz conmigo mismo!"
+              </p>
+              <div class="w-full flex items-center gap-3">
+                <div class="shrink-0 inline-flex relative w-10 h-10">
+                  <img
+                    src="https://media.cssninja.io/shuriken/avatars/3.svg"
+                    class="object-cover max-w-full rounded-full dark:border-transparent shadow-sm"
+                    alt="User image"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm text-muted-800 dark:text-muted-100">
+                    Juan Carmona
+                  </h4>
+                  <p class="text-xs text-muted-400">Edo. México, México</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <Card class="'p-6'">
+            <div class="w-full flex flex-col gap-8 font-sans">
+              <iconify-icon class="iconify w-8 h-8 flex items-center justify-center text-3xl text-primary-600 dark:text-rose-500" icon="fa6-solid:quote-left"></iconify-icon>
+              <p class="text-muted-500 dark:text-muted-300">
+                "Como madre soltera, siempre he luchado con la culpa y la ansiedad. 
+                Pero gracias a los artículos y herramientas de esta página web, 
+                he aprendido a manejar mis preocupaciones y a priorizar mi bienestar mental. 
+                ¡Ahora puedo ser una mejor madre para mis hijos!"
+              </p>
+              <div class="w-full flex items-center gap-3">
+                <div class="shrink-0 inline-flex relative w-10 h-10">
+                  <img
+                    src="https://media.cssninja.io/shuriken/avatars/2.svg"
+                    class="object-cover max-w-full rounded-full dark:border-transparent shadow-sm"
+                    alt="User image"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm text-muted-800 dark:text-muted-100">
+                    Patricia Hernandez
+                  </h4>
+                  <p class="text-xs text-muted-400">Monterrey, Nuevo León</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <Card class="'p-6'">
+            <div class="w-full flex flex-col gap-8 font-sans">
+              <iconify-icon class="iconify w-8 h-8 flex items-center justify-center text-3xl text-primary-600 dark:text-rose-500" icon="fa6-solid:quote-left"></iconify-icon>
+              <p class="text-muted-500 dark:text-muted-300">
+                "Después de años de terapia tradicional, encontré esta página web y decidí probar sus recursos. 
+                ¡Fue un cambio de juego! Los ejercicios de mindfulness y las técnicas de afrontamiento me han 
+                ayudado a reducir mi estrés y a mejorar mi calidad de vida. De una manera increíble"
+              </p>
+              <div class="w-full flex items-center gap-3">
+                <div class="shrink-0 inline-flex relative w-10 h-10">
+                  <img
+                    src="https://media.cssninja.io/shuriken/avatars/10.svg"
+                    class="object-cover max-w-full rounded-full dark:border-transparent shadow-sm"
+                    alt="User image"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm text-muted-800 dark:text-muted-100">
+                    Jocelyn Jimenez
+                  </h4>
+                  <p class="text-xs text-muted-400">Los Cabos, B.C. Sur</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <Card class="'p-6'">
+            <div class="w-full flex flex-col gap-8 font-sans">
+              <iconify-icon class="iconify w-8 h-8 flex items-center justify-center text-3xl text-primary-600 dark:text-rose-500" icon="fa6-solid:quote-left"></iconify-icon>
+              <p class="text-muted-500 dark:text-muted-300">
+                "Como estudiante universitario, siempre he luchado con la procrastinación y la autoestima baja.
+                 Gracias a los consejos y la motivación que encontré en esta página web, he logrado mejorar 
+                 mis hábitos de estudio y a creer en mí mismo. Ahora soy un mejor estudiante"
+              </p>
+              <div class="w-full flex items-center gap-3">
+                <div class="shrink-0 inline-flex relative w-10 h-10">
+                  <img
+                    src="https://media.cssninja.io/shuriken/avatars/9.svg"
+                    class="object-cover max-w-full rounded-full dark:border-transparent shadow-sm"
+                    alt="User image"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm text-muted-800 dark:text-muted-100">
+                    Karen García
+                  </h4>
+                  <p class="text-xs text-muted-400">Hermosillo, Sonora</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <Card class="'p-6'">
+            <div class="w-full flex flex-col gap-8 font-sans">
+              <iconify-icon class="iconify w-8 h-8 flex items-center justify-center text-3xl text-primary-600 dark:text-rose-500" icon="fa6-solid:quote-left"></iconify-icon>
+              <p class="text-muted-500 dark:text-muted-300">
+                "Después de un divorcio difícil, me encontré luchando contra la depresión y la soledad. 
+                Gracias a los recursos y la comunidad de apoyo en esta página web, he podido reconstruir 
+                mi vida y encontrar la felicidad de nuevo. Ahora puedo vivir una vida plena y llena de felicidad"
+              </p>
+              <div class="w-full flex items-center gap-3">
+                <div class="shrink-0 inline-flex relative w-10 h-10">
+                  <img
+                    src="https://media.cssninja.io/shuriken/avatars/11.svg"
+                    class="object-cover max-w-full rounded-full dark:border-transparent shadow-sm"
+                    alt="User image"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm text-muted-800 dark:text-muted-100">
+                    Jesús Panduro
+                  </h4>
+                  <p class="text-xs text-muted-400">Guadalajara, Jalisco</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <div class="swiper-slide">
+          <Card class="'p-6'">
+            <div class="w-full flex flex-col gap-8 font-sans">
+              <iconify-icon class="iconify w-8 h-8 flex items-center justify-center text-3xl text-primary-600 dark:text-rose-500" icon="fa6-solid:quote-left"></iconify-icon>
+              <p class="text-muted-500 dark:text-muted-300">
+                "Como emprendedor, siempre he enfrentado una montaña rusa de emociones y estrés. Pero gracias a 
+                los consejos prácticos y las técnicas de manejo del estrés que descubrí en esta página web, 
+                he aprendido a mantenerme enfocado y tranquilo incluso en los momentos más desafiantes. "
+              </p>
+              <div class="w-full flex items-center gap-3">
+                <div class="shrink-0 inline-flex relative w-10 h-10">
+                  <img
+                    src="https://media.cssninja.io/shuriken/avatars/16.svg"
+                    class="object-cover max-w-full rounded-full dark:border-transparent shadow-sm"
+                    alt="User image"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm text-muted-800 dark:text-muted-100">
+                    Kevin Ortega
+                  </h4>
+                  <p class="text-xs text-muted-400">Morelia, Michoacan</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

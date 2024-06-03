@@ -1,0 +1,643 @@
+---
+import Card from "@components/base/Card.astro";
+---
+
+<div class="grid md:grid-cols-3 ltablet:grid-cols-3 lg:grid-cols-3 gap-x-6 ptablet:gap-x-4 gap-y-16 pt-10">
+  <div x-show="activeCategory === 'all' || activeCategory === 'cardiology'">
+    <Card class="'p-4'">
+      <div
+        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
+      >
+        <img
+          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+          src="/img/illustrations/doctors/doctor-1.svg"
+          alt="Doctor"
+        />
+      </div>
+      <div class="font-sans mt-3">
+        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
+          Lic. Andrea Gómez
+        </h4>
+        <p class="text-sm text-muted-400">Terapia de pareja</p>
+      </div>
+      <div class="mt-2">
+        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
+          Psicóloga experta en terapia de pareja, crea un ambiente seguro y de apoyo para resolver conflictos y mejorar relaciones.
+        </p>
+      </div>
+      <div class="flex items-center justify-between font-sans mt-3">
+        <div class="flex items-center gap-2">
+          <button
+            tooltip="Agendar cita"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:calendar-check-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Enviar mensaje"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:chat-circle-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Ver perfil"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:user-duotone"></iconify-icon>
+          </button>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+          <iconify-icon class="iconify w-4 h-4 text-yellow-400" icon="uiw:star-on"></iconify-icon>
+          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
+            >4.8/5</span
+          >
+        </div>
+      </div>
+    </Card>
+  </div>
+  <!-- Doctor -->
+  <div x-show="activeCategory === 'all' || activeCategory === 'gynaecology'">
+    <Card class="'p-4'">
+      <div
+        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
+      >
+        <img
+          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+          src="/img/illustrations/doctors/doctor-2.svg"
+          alt="Doctor"
+        />
+      </div>
+      <div class="font-sans mt-3">
+        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
+          Lic. Pedro García
+        </h4>
+        <p class="text-sm text-muted-400">Terapia infantil</p>
+      </div>
+      <div class="mt-2">
+        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
+          Psicólogo infantil cálido y empático, se dedica a ayudar a niños y adolescentes a superar desafíos emocionales y comportamentales.
+        </p>
+      </div>
+      <div class="flex items-center justify-between font-sans mt-3">
+        <div class="flex items-center gap-2">
+          <button
+            tooltip="Agendar cita"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:calendar-check-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Enviar mensaje"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:chat-circle-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Ver perfil"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:user-duotone"></iconify-icon>
+          </button>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+          <iconify-icon class="iconify w-4 h-4 text-yellow-400" icon="uiw:star-on"></iconify-icon>
+          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
+            >4.4/5</span
+          >
+        </div>
+      </div>
+    </Card>
+  </div>
+  <!-- Doctor -->
+  <div x-show="activeCategory === 'all' || activeCategory === 'neurology'">
+    <Card class="'p-4'">
+      <div
+        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
+      >
+        <img
+          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+          src="/img/illustrations/doctors/doctor-3.svg"
+          alt="Doctor"
+        />
+      </div>
+      <div class="font-sans mt-3">
+        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
+          Lic. Juan Martinez
+        </h4>
+        <p class="text-sm text-muted-400">Terapia familiar</p>
+      </div>
+      <div class="mt-2">
+        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
+          Psicólogo especializado en terapia familiar, con amplia experiencia en ayudar a familias a superar desafíos y fortalecer lazos.
+        </p>
+      </div>
+      <div class="flex items-center justify-between font-sans mt-3">
+        <div class="flex items-center gap-2">
+          <button
+            tooltip="Agendar cita"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:calendar-check-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Enviar mensaje"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:chat-circle-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Ver perfil"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:user-duotone"></iconify-icon>
+          </button>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+          <iconify-icon class="iconify w-4 h-4 text-yellow-400" icon="uiw:star-on"></iconify-icon>
+          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
+            >5/5</span
+          >
+        </div>
+      </div>
+    </Card>
+  </div>
+  <!-- Doctor -->
+  <div x-show="activeCategory === 'all' || activeCategory === 'dermatology'">
+    <Card class="'p-4'">
+      <div
+        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
+      >
+        <img
+          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+          src="/img/illustrations/doctors/doctor-4.svg"
+          alt="Doctor"
+        />
+      </div>
+      <div class="font-sans mt-3">
+        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
+          Lic. Kiara Ortega
+        </h4>
+        <p class="text-sm text-muted-400">Terapia educativa</p>
+      </div>
+      <div class="mt-2">
+        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
+          Psicóloga educativa apasionada por el aprendizaje y el desarrollo de los estudiantes, colabora con maestros y padres para crear entornos de aprendizaje inclusivos y motivadores.
+        </p>
+      </div>
+      <div class="flex items-center justify-between font-sans mt-3">
+        <div class="flex items-center gap-2">
+          <button
+            tooltip="Agendar cita"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:calendar-check-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Enviar mensaje"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:chat-circle-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Ver perfil"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:user-duotone"></iconify-icon>
+          </button>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+          <iconify-icon class="iconify w-4 h-4 text-yellow-400" icon="uiw:star-on"></iconify-icon>
+          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
+            >4.8/5</span
+          >
+        </div>
+      </div>
+    </Card>
+  </div>
+  <!-- Doctor -->
+  <div x-show="activeCategory === 'all' || activeCategory === 'general'">
+    <Card class="'p-4'">
+      <div
+        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
+      >
+        <img
+          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+          src="/img/illustrations/doctors/doctor-5.svg"
+          alt="Doctor"
+        />
+      </div>
+      <div class="font-sans mt-3">
+        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
+          Lic. Carlos López
+        </h4>
+        <p class="text-sm text-muted-400">General</p>
+      </div>
+      <div class="mt-2">
+        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
+          Psicólogo con amplia experiencia en terapia individual y grupal, especializado en el 
+          manejo de diversas problemáticas emocionales y conductuales.
+        </p>
+      </div>
+      <div class="flex items-center justify-between font-sans mt-3">
+        <div class="flex items-center gap-2">
+          <button
+            tooltip="Agendar cita"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:calendar-check-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Enviar mensaje"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:chat-circle-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Ver perfil"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:user-duotone"></iconify-icon>
+          </button>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+          <iconify-icon class="iconify w-4 h-4 text-yellow-400" icon="uiw:star-on"></iconify-icon>
+          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
+            >4.5/5</span
+          >
+        </div>
+      </div>
+    </Card>
+  </div>
+  <!-- Doctor -->
+  <div x-show="activeCategory === 'all' || activeCategory === 'surgery'">
+    <Card class="'p-4'">
+      <div
+        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
+      >
+        <img
+          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+          src="/img/illustrations/doctors/doctor-6.svg"
+          alt="Doctor"
+        />
+      </div>
+      <div class="font-sans mt-3">
+        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
+          Lic. Laura Torres
+        <p class="text-sm text-muted-400">Social</p>
+      </div>
+      <div class="mt-2">
+        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
+          Psicóloga social enfocada en promover el cambio social positivo, especializada en proyectos para mejorar la calidad de vida y fomentar la inclusión de los pacientes en la sociedad.
+        </p>
+      </div>
+      <div class="flex items-center justify-between font-sans mt-3">
+        <div class="flex items-center gap-2">
+          <button
+            tooltip="Agendar cita"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:calendar-check-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Enviar mensaje"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:chat-circle-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Ver perfil"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:user-duotone"></iconify-icon>
+          </button>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+          <iconify-icon class="iconify w-4 h-4 text-yellow-400" icon="uiw:star-on"></iconify-icon>
+          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
+            >4.9/5</span
+          >
+        </div>
+      </div>
+    </Card>
+  </div>
+  <!-- Doctor -->
+  <div x-show="activeCategory === 'all' || activeCategory === 'gynaecology'">
+    <Card class="'p-4'">
+      <div
+        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
+      >
+        <img
+          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+          src="/img/illustrations/doctors/doctor-7.svg"
+          alt="Doctor"
+        />
+      </div>
+      <div class="font-sans mt-3">
+        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
+          Lic. Alejandro López
+        </h4>
+        <p class="text-sm text-muted-400">Terapia infantil</p>
+      </div>
+      <div class="mt-2">
+        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
+          Especializado en psicología infantil, tiene una habilidad innata para conectar con los niños y entender sus necesidades emocionales, y ayudarlos en su desarrollo
+        </p>
+      </div>
+      <div class="flex items-center justify-between font-sans mt-3">
+        <div class="flex items-center gap-2">
+          <button
+            tooltip="Agendar cita"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:calendar-check-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Enviar mensaje"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:chat-circle-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Ver perfil"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:user-duotone"></iconify-icon>
+          </button>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+          <iconify-icon class="iconify w-4 h-4 text-yellow-400" icon="uiw:star-on"></iconify-icon>
+          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
+            >4.8/5</span
+          >
+        </div>
+      </div>
+    </Card>
+  </div>
+  <!-- Doctor -->
+  <div x-show="activeCategory === 'all' || activeCategory === 'cardiology'">
+    <Card class="'p-4'">
+      <div
+        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
+      >
+        <img
+          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+          src="/img/illustrations/doctors/doctor-8.svg"
+          alt="Doctor"
+        />
+      </div>
+      <div class="font-sans mt-3">
+        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
+          Lic. Daniel Sánchez
+        </h4>
+        <p class="text-sm text-muted-400">Terapia de pareja</p>
+      </div>
+      <div class="mt-2">
+        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
+          Psicólogo especializado en terapia de pareja, con enfoque en comunicación y empatía para superar conflictos y fortalecer relaciones, creando vinculos fuertes.
+        </p>
+      </div>
+      <div class="flex items-center justify-between font-sans mt-3">
+        <div class="flex items-center gap-2">
+          <button
+            tooltip="Agendar cita"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:calendar-check-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Enviar mensaje"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:chat-circle-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Ver perfil"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:user-duotone"></iconify-icon>
+          </button>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+          <iconify-icon class="iconify w-4 h-4 text-yellow-400" icon="uiw:star-on"></iconify-icon>
+          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
+            >4.7/5</span
+          >
+        </div>
+      </div>
+    </Card>
+  </div>
+  <!-- Doctor -->
+  <div x-show="activeCategory === 'all' || activeCategory === 'general'">
+    <Card class="'p-4'">
+      <div
+        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
+      >
+        <img
+          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+          src="/img/illustrations/doctors/doctor-9.svg"
+          alt="Doctor"
+        />
+      </div>
+      <div class="font-sans mt-3">
+        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
+          Lic. Laura Martínez
+        </h4>
+        <p class="text-sm text-muted-400">General</p>
+      </div>
+      <div class="mt-2">
+        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
+          Psicóloga comprometida con el bienestar emocional de sus pacientes, 
+          ofrece un enfoque integral y personalizado en la atención psicológica.
+        </p>
+      </div>
+      <div class="flex items-center justify-between font-sans mt-3">
+        <div class="flex items-center gap-2">
+          <button
+            tooltip="Agendar cita"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:calendar-check-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Enviar mensaje"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:chat-circle-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Ver perfil"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:user-duotone"></iconify-icon>
+          </button>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+          <iconify-icon class="iconify w-4 h-4 text-yellow-400" icon="uiw:star-on"></iconify-icon>
+          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
+            >4.3/5</span
+          >
+        </div>
+      </div>
+    </Card>
+  </div>
+  <!-- Doctor -->
+  <div x-show="activeCategory === 'all' || activeCategory === 'general'">
+    <Card class="'p-4'">
+      <div
+        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
+      >
+        <img
+          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+          src="/img/illustrations/doctors/doctor-10.svg"
+          alt="Doctor"
+        />
+      </div>
+      <div class="font-sans mt-3">
+        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
+          Lic. Juan Rodríguez
+        </h4>
+        <p class="text-sm text-muted-400">General</p>
+      </div>
+      <div class="mt-2">
+        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
+          Psicólogo clínico con habilidades en evaluación psicológica y tratamiento, 
+          enfocado en proporcionar apoyo emocional y herramientas prácticas para el crecimiento personal.
+        </p>
+      </div>
+      <div class="flex items-center justify-between font-sans mt-3">
+        <div class="flex items-center gap-2">
+          <button
+            tooltip="Agendar cita"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:calendar-check-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Enviar mensaje"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:chat-circle-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Ver perfil"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:user-duotone"></iconify-icon>
+          </button>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+          <iconify-icon class="iconify w-4 h-4 text-yellow-400" icon="uiw:star-on"></iconify-icon>
+          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
+            >4.9/5</span
+          >
+        </div>
+      </div>
+    </Card>
+  </div>
+  <!-- Doctor -->
+  <div x-show="activeCategory === 'all' || activeCategory === 'surgery'">
+    <Card class="'p-4'">
+      <div
+        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
+      >
+        <img
+          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+          src="/img/illustrations/doctors/doctor-11.svg"
+          alt="Doctor"
+        />
+      </div>
+      <div class="font-sans mt-3">
+        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
+          Lic. Andrés Vargas
+        </h4>
+        <p class="text-sm text-muted-400">Social</p>
+      </div>
+      <div class="mt-2">
+        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
+          Psicólogo social comprometido con el bienestar comunitario, con experiencia en programas de intervención social, para intregarse a la sociedad adecuadamente.
+        </p>
+      </div>
+      <div class="flex items-center justify-between font-sans mt-3">
+        <div class="flex items-center gap-2">
+          <button
+            tooltip="Agendar cita"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:calendar-check-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Enviar mensaje"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:chat-circle-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Ver perfil"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:user-duotone"></iconify-icon>
+          </button>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+          <iconify-icon class="iconify w-4 h-4 text-yellow-400" icon="uiw:star-on"></iconify-icon>
+          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
+            >4.3/5</span
+          >
+        </div>
+      </div>
+    </Card>
+  </div>
+  <!-- Doctor -->
+  <div x-show="activeCategory === 'all' || activeCategory === 'dermatology'">
+    <Card class="'p-4'">
+      <div
+        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
+      >
+        <img
+          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+          src="/img/illustrations/doctors/doctor-12.svg"
+          alt="Doctor"
+        />
+      </div>
+      <div class="font-sans mt-3">
+        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
+          Lic. Diego Martínez
+        </h4>
+        <p class="text-sm text-muted-400">Terapia educativa</p>
+      </div>
+      <div class="mt-2">
+        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
+          Psicólogo educativo comprometido con el desarrollo integral de los estudiantes, especializado en programas para mejorar el rendimiento académico y el bienestar emocional.
+        </p>
+      </div>
+      <div class="flex items-center justify-between font-sans mt-3">
+        <div class="flex items-center gap-2">
+          <button
+            tooltip="Agendar cita"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:calendar-check-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Enviar mensaje"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:chat-circle-duotone"></iconify-icon>
+          </button>
+          <button
+            tooltip="Ver pefil"
+            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
+          >
+            <iconify-icon class="iconify w-4 h-4" icon="ph:user-duotone"></iconify-icon>
+          </button>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+          <iconify-icon class="iconify w-4 h-4 text-yellow-400" icon="uiw:star-on"></iconify-icon>
+          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
+            >4.9/5</span
+          >
+        </div>
+      </div>
+    </Card>
+  </div>
+</div>

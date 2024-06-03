@@ -1,0 +1,178 @@
+---
+import Layout from "@layouts/Default.astro";
+import ButtonMain from "@components/base/ButtonMain.astro";
+import HeroMain from "@components/hero/HeroMain.astro";
+import SectionMuted from "@components/section/SectionMuted.astro";
+import Container from "@components/section/Container.astro";
+import SectionTitle from "@components/section/SectionTitle.astro";
+import IconBlock from "@components/content/IconBlock.astro";
+import Toolbar from "@components/content/doctors/grid/Toolbar.astro";
+import Filters from "@components/content/doctors/grid/Filters.astro";
+import Grid from "@components/content/doctors/grid/Grid.astro";
+import SideStatsRight from "@components/content/features/SideStatsRight.astro";
+import SideStatsLeft from "@components/content/features/SideStatsLeft.astro";
+import Pricing from "@components/content/Pricing.astro";
+import Cta from "@components/content/Cta.astro";
+import Testimonials from "@components/content/Testimonials.astro";
+---
+
+<Layout title="Home">
+  <HeroMain />
+
+  <SectionMuted>
+    <Container>
+      <SectionTitle
+        title="Olvidate de los problemas"
+        subtitle="Deja atrás el estrés y la preocupación. Nuestra plataforma te ofrece soluciones rápidas y efectivas para tus necesidades de atención médica. Confía en nosotros para cuidar de ti y tu bienestar, sin complicaciones."
+        minititle="Atención psicológica a pedido"
+      />
+
+      <div class="grid md:grid-cols-3 ltablet:grid-cols-4 lg:grid-cols-4 gap-x-6 gap-y-12" x-intersect="activeStep = ''">
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Ahorrar tiempo y esfuerzo"
+            text="Obtén atención médica de calidad con rapidez y facilidad. Con nuestra plataforma, ahorras tiempo y esfuerzo al acceder a servicios médicos de manera eficiente y conveniente."
+            icon="ph:timer-duotone"
+            class="'text-primary-600'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Profesionales seleccionados"
+            text="Confía en nuestro equipo de expertos psicológicos cuidadosamente seleccionados para recibir la mejor atención. Están altamente calificados y comprometidos con tu bienestar, ofreciéndote un servicio personalizado y de calidad."
+            icon="ph:first-aid-duotone"
+            class="'text-rose-500'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Emergencias 24/7"
+            text="Accede a ayuda profesional en cualquier momento del día o la noche. Nuestro equipo de psicólogos está disponible las 24 horas para brindarte el apoyo que necesitas en momentos de crisis emocional."
+            icon="ph:first-aid-kit-duotone"
+            class="'text-primary-600'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Servicios Conectados"
+            text="Accede a una red integrada de servicios psicológicos diseñada para brindarte un apoyo continuo y coordinado. Nuestro enfoque conectado te permite acceder a una variedad de recursos y terapias adaptadas a tus necesidades, todo en un solo lugar."
+            icon="ph:heartbeat-duotone"
+            class="'text-rose-500'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Consultas por video"
+            text="Accede a terapia psicológica desde casa a través de videoconferencias, ofreciéndote la misma calidad que en persona."
+            icon="ph:video-camera-duotone"
+            class="'text-primary-600'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Consultas por llamada"
+            text="Accede a sesiones de terapia psicológica a través de llamadas de audio, brindándote apoyo profesional de manera conveniente y efectiva."
+            icon="ph:phone-duotone"
+            class="'text-primary-600'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Citas"
+            text="Programa tus sesiones de terapia psicológica de manera rápida y sencilla. Nuestra plataforma te permite reservar citas con nuestros profesionales con facilidad y flexibilidad."
+            icon="ph:calendar-duotone"
+            class="'text-primary-600'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Medicamento"
+            text="Accede a medicación prescrita por nuestros profesionales de la salud mental para complementar tu tratamiento psicológico."
+            icon="ph:pill-duotone"
+            class="'text-primary-600'"
+          />
+        </div>
+      </div>
+    </Container>
+  </SectionMuted>
+
+  <SectionMuted class="'border-b border-muted-200 dark:border-muted-800'">
+    <Container>
+      <SectionTitle
+        title="Nuestros grandiosos Doctores"
+        subtitle="Confía en nuestro equipo de expertos en salud mental, comprometidos con brindarte el mejor apoyo y orientación para tu bienestar emocional."
+        minititle="Profesionales de la salud"
+        class="'mx-auto text-center'"
+      />
+
+      <div id="doctors" x-data="doctors()"  x-intersect="activeStep = 'spy-1'">
+        <Toolbar />
+
+        <!--Grid wrapper-->
+        <div class="py-10">
+          <div class="grid grid-cols-12 md:gap-12 pb-20">
+            <!--Filters-->
+            <div class="hidden lg:block col-span-12 lg:col-span-3">
+              <Filters />
+            </div>
+            <!--Content-->
+            <div class="col-span-12 lg:col-span-9">
+              <!--Subgrid-->
+              <Grid />
+            </div>
+          </div>
+          <div class="flex items-center justify-center mt-10">
+            <ButtonMain to="#" class="'w-64 !h-14 max-w-full'">Mira todos nuestros doctores</ButtonMain>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </SectionMuted>
+
+  <SectionMuted class="'overflow-hidden'">
+    <Container>
+      <div class="py-10">
+        <SideStatsRight />
+        <SideStatsLeft />
+      </div>
+    </Container>
+  </SectionMuted>
+
+  <SectionMuted>
+    <Container>
+      <SectionTitle
+        title="Articulos que podrían ayudarte"
+        subtitle=""
+        minititle="Articulos"
+        class="'mx-auto text-center'"
+      />
+      <Pricing />
+    </Container>
+  </SectionMuted>
+
+  <SectionMuted id="testimonials">
+    <Container>
+      <SectionTitle
+        title="Ellos aman Bright"
+        subtitle="Descubre por qué nuestros usuarios aman nuestra página. Ofrecemos contenido de calidad, recursos útiles y una experiencia en línea que marca la diferencia en sus vidas. ¡Únete a nuestra comunidad y descubre cómo podemos ayudarte a mejorar tu bienestar emocional y mental!"
+        minititle="Nuestros visitantes"
+        class="'mx-auto text-center'"
+      />
+      <Testimonials />
+    </Container>
+  </SectionMuted>
+
+  <SectionMuted>
+    <Container>
+      <Cta />
+    </Container>
+  </SectionMuted>
+</Layout>
